@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final int NOTIFICATION_ID = 123;
+    public final int NOTIFICATION_ID = 123;
 
-    private NotificationSender notificationSender;
+    public static NotificationSender notificationSender;
     private TextView editText;
 
     @Override
@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         editText = findViewById(R.id.edit_title);
         Button sendButton = findViewById(R.id.send_button);
         sendButton.setOnClickListener(getSendButtonClick());
+
+
     }
 
     private String getEditText() {
@@ -34,8 +36,9 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener getSendButtonClick() {
         return new View.OnClickListener() {
             public void onClick(View v) {
+
                 Notification.Builder notification =
-                        notificationSender.getNotificationBuilder(getEditText(), "This is a notification!!");
+                        notificationSender.getNotificationBuilder("From the button", getEditText());
 
                 if (notification != null) {
                     notificationSender.send(NOTIFICATION_ID, notification);

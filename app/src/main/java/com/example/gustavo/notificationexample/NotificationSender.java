@@ -19,7 +19,7 @@ public class NotificationSender extends ContextWrapper {
                 new NotificationChannel(
                         NOTIFICATION_CHANNEL,
                         NOTIFICATION_SEQUENCE,
-                        NotificationManager.IMPORTANCE_DEFAULT);
+                        NotificationManager.IMPORTANCE_HIGH);
         notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
         getNotificationManager().createNotificationChannel(notificationChannel);
 

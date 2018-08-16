@@ -19,8 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_columnSpan="2"
         android:layout_gravity="fill_horizontal"
-        android:hint="This will be the title"
-        android:text="This will be the title" />
+        android:hint="This will be the message"
+        android:text="This will be the message" />
 
     <Button
         android:id="@+id/send_button"
