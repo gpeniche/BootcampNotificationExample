@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     private final int NOTIFICATION_ID = 123;
 
-    private NotificationSender notificationSender;
+    public static NotificationSender notificationSender;
     private TextView editText;
 
     @Override
